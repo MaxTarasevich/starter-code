@@ -1,11 +1,98 @@
 *{
     box-sizing: border-box;
+	--dark-purple:#24053E;
+	--white:#FFFFFF;
+	--eucaplyptus:#44FFA1;
 }
+
+@font-face {
+	font-family: 'Fraunces';
+	src: url('./assets/fonts/fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf') format('ttf') tech('variations'),
+    url('./assets/fonts/fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf') format('ttf') tech('variations') format('ttf-variations');
+	font-weight: 100 1000;
+	font-stretch: 25% 151%;
+}
+
+@font-face {
+	font-family: 'Manrope';
+	src: url('./assets/fonts/manrope/Manrope-VariableFont_wght.ttf') format('ttf') tech('variations'),
+    url('./assets/fonts/manrope/Manrope-VariableFont_wght.ttf') tech('variations') format('ttf-variations');
+	font-weight: 100 1000;
+	font-stretch: 25% 151%;
+}
+
 body{
     margin: 0;
     padding: 0;
+	font-family: 'Fraunces';
 }
+
 h1,h2,h3,p{
     margin: 0;
     padding: 0;
+}
+
+a{
+	text-decoration: none;
+	color: inherit;
+}
+
+img{
+	max-width: 100%;
+}
+
+.container{
+	max-width: 1112px;
+	margin: 0 auto;
+}
+
+/*Utility classes*/
+
+.flex{
+	display: flex;
+}
+
+.flex-between{
+	justify-content: space-between;
+	align-items: center;
+}
+
+.text-underline{
+	border-bottom: 1px solid var(--eucaplyptus);
+}
+
+/*Section Hero + Header*/
+
+.hero{
+	background-image: url(./assets/images/bg-pattern-1.svg),
+						url(./assets/images/bg-pattern-2.svg);
+	background-repeat: no-repeat;
+	background-position: left, right;
+	background-color: var(--dark-purple);
+	color: var(--white);
+}
+
+.header{
+	padding: 56px 0px;
+}
+
+.header__btn{
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 1.78;
+letter-spacing: -0.18px;
+}
+
+.hero__title{
+	max-width: 635px;
+	margin: 0 auto;
+	text-align: center;
+	font-style: normal;
+	font-family: 'Fraunces';
+	font-variation-settings: "wght" 600;
+	font-weight: 600;
+	font-size: 80px;
+	line-height: 80px;
 }
