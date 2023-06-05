@@ -1,98 +1,204 @@
-*{
-    box-sizing: border-box;
-	--dark-purple:#24053E;
-	--white:#FFFFFF;
-	--eucaplyptus:#44FFA1;
+@font-face {
+  font-family: "Fraunces";
+  src: url("./assets/fonts/fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf");
 }
 
 @font-face {
-	font-family: 'Fraunces';
-	src: url('./assets/fonts/fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf') format('ttf') tech('variations'),
-    url('./assets/fonts/fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf') format('ttf') tech('variations') format('ttf-variations');
-	font-weight: 100 1000;
-	font-stretch: 25% 151%;
+  font-family: "Manrope";
+  src: url("./assets/fonts/manrope/Manrope-VariableFont_wght.ttf");
 }
 
-@font-face {
-	font-family: 'Manrope';
-	src: url('./assets/fonts/manrope/Manrope-VariableFont_wght.ttf') format('ttf') tech('variations'),
-    url('./assets/fonts/manrope/Manrope-VariableFont_wght.ttf') tech('variations') format('ttf-variations');
-	font-weight: 100 1000;
-	font-stretch: 25% 151%;
+* {
+  box-sizing: border-box;
+  --dark-purple: #24053e;
+  --white: #ffffff;
+  --eucaplyptus: #44ffa1;
 }
 
-body{
-    margin: 0;
-    padding: 0;
-	font-family: 'Fraunces';
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Fraunces";
 }
 
-h1,h2,h3,p{
-    margin: 0;
-    padding: 0;
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
 }
 
-a{
-	text-decoration: none;
-	color: inherit;
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-img{
-	max-width: 100%;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-.container{
-	max-width: 1112px;
-	margin: 0 auto;
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1112px;
+  margin: 0 auto;
 }
 
 /*Utility classes*/
 
-.flex{
-	display: flex;
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.flex-between{
-	justify-content: space-between;
-	align-items: center;
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.text-underline{
-	border-bottom: 1px solid var(--eucaplyptus);
+.text-underline {
+  border-bottom: 1px solid var(--eucaplyptus);
+}
+
+.text-manrop {
+  font-family: "Manrope";
+  font-variation-settings: "wght" 700;
+  font-size: 18px;
+  line-height: 1.78;
+  letter-spacing: -0.18px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
 }
 
 /*Section Hero + Header*/
 
-.hero{
-	background-image: url(./assets/images/bg-pattern-1.svg),
-						url(./assets/images/bg-pattern-2.svg);
-	background-repeat: no-repeat;
-	background-position: left, right;
-	background-color: var(--dark-purple);
-	color: var(--white);
+.hero {
+  background-image: url(./assets/images/bg-pattern-1.svg),
+    url(./assets/images/bg-pattern-2.svg);
+  background-repeat: no-repeat;
+  background-position: left, right;
+  background-color: var(--dark-purple);
+  color: var(--white);
 }
 
-.header{
-	padding: 56px 0px;
+.header {
+  padding: 56px 0px;
 }
 
-.header__btn{
-font-family: 'Manrope';
-font-style: normal;
-font-weight: 700;
-font-size: 18px;
-line-height: 1.78;
-letter-spacing: -0.18px;
+.hero__title {
+  max-width: 635px;
+  margin: 0 auto 37px;
+  font-variation-settings: "wght" 600;
+  font-size: 80px;
+  line-height: 80px;
 }
 
-.hero__title{
-	max-width: 635px;
-	margin: 0 auto;
-	text-align: center;
-	font-style: normal;
-	font-family: 'Fraunces';
-	font-variation-settings: "wght" 600;
-	font-weight: 600;
-	font-size: 80px;
-	line-height: 80px;
+.hero__link {
+  padding: 13px 32px;
+  background-color: var(--eucaplyptus);
+  color: var(--dark-purple);
+}
+
+.hero__img {
+  margin: 50px auto 0px;
+  max-width: 767px;
+}
+
+/*Card section*/
+.cards {
+  padding: 285px 0 250px;
+}
+.card {
+  max-width: 355px;
+  color: var(--dark-purple);
+}
+
+.card__number {
+  margin: 0 auto;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1px solid var(--dark-purple);
+  font-variation-settings: "wght" 600;
+  font-size: 24px;
+}
+
+.card__title {
+  margin: 56px 0px 28px;
+  font-variation-settings: "wght" 600;
+  font-size: 32px;
+}
+
+.card__body {
+  font-family: "Manrope";
+  font-variation-settings: "wght" 400;
+  font-size: 18px;
+}
+
+/*Test section*/
+.test {
+  padding-bottom: 230px;
+}
+.test__founder {
+  width: 477px;
+  height: 477px;
+  border-radius: 50%;
+}
+.test__card {
+  max-width: 730px;
+  padding: 64px;
+  bottom: -170px;
+  right: 0;
+  background-color: var(--dark-purple);
+  background-image: url(./assets/images/bg-pattern-3.svg);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  color: var(--white);
+}
+
+.test__title {
+  font-variation-settings: "wght" 600;
+  font-size: 56px;
+}
+
+.test__body {
+  margin: 32px 0px;
+  font-family: "Manrope";
+  font-variation-settings: "wght" 400;
+  font-size: 18px;
+}
+
+.test__button {
+  padding: 13px 25px;
+  background-color: var(--eucaplyptus);
+  color: var(--dark-purple);
+}
+
+/*Footer*/
+.footer {
+  padding-bottom: 111px;
+}
+.footer__logo {
+  margin-bottom: 57px;
+}
+
+.footer__social {
+  gap: 28px;
 }
