@@ -1,24 +1,28 @@
-@font-face {
-  font-family: "Fraunces";
-  src: url("./assets/fonts/fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf");
+:root {
+  --dark-purple: #24053e;
+  --white: #ffffff;
+  --eucaplyptus: #44ffa1;
+  --ghost-white: #fcf8ff;
 }
 
 @font-face {
-  font-family: "Manrope";
-  src: url("./assets/fonts/manrope/Manrope-VariableFont_wght.ttf");
+  font-family: 'Fraunces';
+  src: url('./assets/fonts/fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf');
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('./assets/fonts/manrope/Manrope-VariableFont_wght.ttf');
 }
 
 * {
   box-sizing: border-box;
-  --dark-purple: #24053e;
-  --white: #ffffff;
-  --eucaplyptus: #44ffa1;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: "Fraunces";
+  font-family: 'Fraunces';
 }
 
 h1,
@@ -69,8 +73,8 @@ img {
 }
 
 .text-manrop {
-  font-family: "Manrope";
-  font-variation-settings: "wght" 700;
+  font-family: 'Manrope';
+  font-variation-settings: 'wght' 700;
   font-size: 18px;
   line-height: 1.78;
   letter-spacing: -0.18px;
@@ -91,6 +95,7 @@ img {
 /*Section Hero + Header*/
 
 .hero {
+  padding-bottom: 300px;
   background-image: url(./assets/images/bg-pattern-1.svg),
     url(./assets/images/bg-pattern-2.svg);
   background-repeat: no-repeat;
@@ -98,8 +103,6 @@ img {
   background-color: var(--dark-purple);
   color: var(--white);
   clip-path: ellipse(143% 100% at top);
-
-  padding-bottom: 300px;
 }
 
 .header {
@@ -115,7 +118,7 @@ img {
 .hero__title {
   max-width: 635px;
   margin: 0 auto 37px;
-  font-variation-settings: "wght" 600;
+  font-variation-settings: 'wght' 600;
   font-size: 80px;
   line-height: 80px;
 }
@@ -143,7 +146,9 @@ img {
 
 /*Card section*/
 .cards {
-  padding: 285px 0 250px;
+  padding: 285px 0 171px;
+  background-color: var(--ghost-white);
+  clip-path: ellipse(143% 100% at top);
 }
 
 .cards .container {
@@ -160,25 +165,25 @@ img {
   height: 56px;
   border-radius: 50%;
   border: 1px solid var(--dark-purple);
-  font-variation-settings: "wght" 600;
+  font-variation-settings: 'wght' 600;
   font-size: 24px;
 }
 
 .card__title {
   margin: 56px 0px 28px;
-  font-variation-settings: "wght" 600;
+  font-variation-settings: 'wght' 600;
   font-size: 32px;
 }
 
 .card__body {
-  font-family: "Manrope";
-  font-variation-settings: "wght" 400;
+  font-family: 'Manrope';
+  font-variation-settings: 'wght' 400;
   font-size: 18px;
 }
 
 /*Test section*/
 .test {
-  padding-bottom: 230px;
+  padding: 110px 0 230px;
 }
 .test__founder {
   width: 477px;
@@ -187,16 +192,15 @@ img {
 }
 .test__card {
   max-width: 730px;
-  margin-right: 40px;
   padding: 64px;
-  bottom: -70px;
-  right: 0;
+  bottom: -110px;
+  right: 40px;
   background-color: var(--dark-purple);
   color: var(--white);
 }
 
 .test__card:after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: -76px;
   right: 40px;
@@ -207,18 +211,20 @@ img {
 }
 
 .test__title {
-  font-variation-settings: "wght" 600;
+  font-variation-settings: 'wght' 600;
   font-size: 56px;
 }
 
 .test__body {
   margin: 32px 0px;
-  font-family: "Manrope";
-  font-variation-settings: "wght" 400;
+  font-family: 'Manrope';
+  font-variation-settings: 'wght' 400;
   font-size: 18px;
+  line-height: 1.78;
 }
 
 .test__button {
+  display: inline-block;
   padding: 13px 25px;
   background-color: var(--eucaplyptus);
   color: var(--dark-purple);
@@ -244,6 +250,9 @@ img {
 }
 
 @media (max-width: 1120px) {
+  .hero{
+     background-position: -205px 138px, 115% 364px;
+  }
   .hero__img {
     max-width: 514px;
   }
