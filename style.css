@@ -133,7 +133,7 @@ img {
 }
 
 .hero__title {
-  max-width: 635px;
+  max-width: 620px;
   margin: 0 auto 51px;
   font-variation-settings: 'wght' 600;
   font-size: 80px;
@@ -232,7 +232,7 @@ img {
 }
 
 .test__title {
-  font-variation-settings: 'wght' 600;
+  font-variation-settings: 'opsz' 9, 'wght' 400, 'SOFT' 0, 'WONK' 1;
   font-size: 56px;
   letter-spacing: -3.5px;
 }
